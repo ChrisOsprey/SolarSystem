@@ -111,7 +111,7 @@ export class SlunecniSoustava {
         kamera.attachControl(true);
 
         const light: BABYLON.PointLight = new BABYLON.PointLight("starLight", BABYLON.Vector3.Zero(), scene);
-        light.intensity = .4;
+        light.intensity = .15;
         light.diffuse = new BABYLON.Color3(8, 8, 8);
         light.specular = new BABYLON.Color3(1, 1, 1);
 

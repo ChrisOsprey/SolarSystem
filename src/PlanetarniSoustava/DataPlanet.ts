@@ -11,6 +11,8 @@ import JupiterDiffuseTextureUrl from "/src/textury/planety/Jupiter/2k_jupiter.jp
 import SaturnDiffuseTextureUrl from "/src/textury/planety/Saturn/2k_saturn.jpg";
 import UranDiffuseTextureUrl from "/src/textury/planety/Uran/2k_uranus.jpg";
 import NeptunDiffuseTextureUrl from "/src/textury/planety/Neptun/2k_neptune.jpg";
+import SaturnringTextureUrl from "/src/textury/planety/Saturn/saturn_rings.png";
+
 
 
 export class DataPlanet {
@@ -225,6 +227,7 @@ export class DataPlanet {
             minZoomFactor: 205,
 
             texturaUrl: SaturnDiffuseTextureUrl,
+            ringTextureUrl: SaturnringTextureUrl,
             infoPlanety: {
                 delkaDne: {
                     hodnota: 10,

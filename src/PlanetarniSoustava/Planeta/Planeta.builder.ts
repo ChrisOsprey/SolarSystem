@@ -1,4 +1,5 @@
 import * as BABYLON from '@babylonjs/core'
+import { Vector3 } from '@babylonjs/core/Maths/math';
 import { DataPlanet } from "../DataPlanet";
 import { ObjeznaDraha } from './ObjeznaDraha/ObjeznaDraha';
 import { IPlaneta } from "./Planeta.interface";
@@ -31,6 +32,29 @@ export class Planeta{
             nightMapTexture.uScale = -1
             material.emissiveTexture = nightMapTexture;
         } 
+        if (dataPlanety.ringTextureUrl){
+            // create the ring mesh
+            const ring = BABYLON.MeshBuilder.CreateDisc("ring", { radius: dataPlanety.polomer * 3 }, scene);
+            ring.rotate(new BABYLON.Vector3(1,0,0), 1/2*Math.PI)
+
+            // create the texture
+            const texture = new BABYLON.Texture(dataPlanety.ringTextureUrl, scene);
+            texture.hasAlpha = true;
+
+            const ringMaterial = new BABYLON.StandardMaterial("ringMaterial", scene);
+            ringMaterial.opacityTexture = texture;
+            ringMaterial.alphaMode = BABYLON.Engine.ALPHA_COMBINE;
+            ringMaterial.backFaceCulling = false;
+            ringMaterial.diffuseTexture = texture;
+            ringMaterial.disableLighting = true
+            ringMaterial.emissiveTexture = ringMaterial.diffuseTexture;
+
+            // set the texture on the ring mesh
+            ring.material = ringMaterial;
+
+            ring.parent = modelPlanety;
+
+        }
         material.backFaceCulling = false;
 
         modelPlanety.position = ObjeznaDraha.vypocetPozicePlanety(dataPlanety.elementyDrahy, 100);

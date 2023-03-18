@@ -12,6 +12,7 @@ export interface IPlaneta {
     normalTextureUrl?: string;
     nightMapTextureUrl?: string;
     atmosferaTextureUrl?: string;
+    ringTextureUrl?: string;
     minZoomFactor?: number;
     infoPlanety: IInfoPlanety
 }
