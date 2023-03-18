@@ -167,7 +167,7 @@ export class DataPlanet {
                 },
                 typPlanety: "Terestrická",
                 pocetMesicu: 2,
-                text:'Mars: Mars je často nazýván "rudou planetou" kvůli své červené barvě na noční obloze. Je to čtvrtá planeta od Slunce a je známá svým prašným, hornatým terénem. Mars je pro vědce velkým zdrojem zájmu, protože by mohl být klíčem k nalezení důkazů o existenci života v minulosti. Zároveň je také plánovaným cílem pro budoucí lidské mise do vesmíru'
+                text:'Mars je často nazýván "rudou planetou" kvůli své červené barvě na noční obloze. Je to čtvrtá planeta od Slunce a je známá svým prašným, hornatým terénem. Mars je pro vědce velkým zdrojem zájmu, protože by mohl být klíčem k nalezení důkazů o existenci života v minulosti. Zároveň je také plánovaným cílem pro budoucí lidské mise do vesmíru.'
             }
            
         },
