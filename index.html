@@ -166,11 +166,46 @@
       margin-top:1rem;
       margin-bottom:1rem;
       font-size: 4vw;
-      font-family: 'Bebas Neue', cursive;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     #infoKarta.vertical h3 {
       font-size: 4vh;
+    }
+
+    h5 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3vw;
+      color:  darkgoldenrod;
+      margin: 0;
+      padding-bottom: .5vw;
+      border-bottom: 1px solid #666;
+    }
+
+    h5 span {
+      color:  darkgoldenrod;
+      color: #666;
+      
+    }
+
+    #infoKarta.vertical h5 {
+      font-size: 3vh;
+    }
+
+    .tile {
+      margin-top: 2vh;
+    }
+
+    h4 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.3vw;
+      color: #666;
+      margin: 0;
+
+    }
+
+    #infoKarta.vertical h4 {
+      font-size: 1.2vh;
     }
 
     #paragraf {
@@ -192,6 +227,7 @@
       justify-content: space-around;
       align-items: center;
       position: relative;
+      margin-bottom: 2rem;
 
     }
 
@@ -233,13 +269,36 @@
             <div class="card">
               <p id="paragraf"></p>
             </div>
-            <div class="card infoTiles">
-              <div class="tile" style="font-size: 1.7vh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates ipsum iusto ad. Dolorem unde esse minima tempora alias dolorum hic aperiam. Natus hic cum iusto molestias velit mollitia consectetur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, maiores. Excepturi eligendi eum labore quidem quibusdam modi soluta rerum! Deleniti sed et assumenda necessitatibus unde blanditiis fugit a at laudantium dolores quibusdam aperiam recusandae delectus in, voluptatem totam vero fugiat minus beatae pariatur officiis magni! Enim, laudantium blanditiis molestiae saepe itaque voluptatibus? Magni modi delectus nostrum saepe earum. Reprehenderit iste, neque, delectus numquam debitis fugiat fugit veniam eligendi asperiores autem cum repellat quidem nostrum dolorum atque laborum animi quo unde. Enim cupiditate incidunt quam dignissimos illum, error voluptate laboriosam quasi nemo, culpa suscipit itaque architecto officiis doloribus eum esse assumenda?</div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
+            <div id="infoTiles" class="card">
+              <div class="tile">
+                <h5 id="typPlanety"></h5>
+                <h4>Typ planety</h4>
+              </div>
+
+              <div class="tile">
+                <h5 id="pocetMesicu"></h5>
+                <h4>Počet měsíců</h4>
+              </div>
+
+              <div class="tile">
+                <h5 id="vzdalenostOdSlunce"></h5>
+                <h4>Vzdálenost od Slunce</h4>
+              </div>
+
+              <div class="tile">
+                <h5 id="polomer"></h5>
+                <h4>Poloměr</h4>
+              </div>
+
+              <div class="tile">
+                <h5 id="delkaDne"></h5>
+                <h4>Délka dne</h4>
+              </div>
+
+              <div class="tile">
+                <h5 id="delkaRoku"></h5>
+                <h4>Délka roku</h4>
+              </div>
             </div>
         </div>        
       </div>

@@ -14,7 +14,7 @@ import NeptunDiffuseTextureUrl from "/src/textury/planety/Neptun/2k_neptune.jpg"
 
 
 export class DataPlanet {
-    public readonly orbitalniPrvky: Record<string, IPlaneta> = {
+    public static readonly orbitalniPrvky: Record<string, IPlaneta> = {
         [EPlanety.Merkur]: {
             nazev: "Merkur",
             polomer: 2439 ,
@@ -32,10 +32,22 @@ export class DataPlanet {
 
             texturaUrl: MerkurDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "176 pozemských dní",
-                vzdalenostOdSlunce: "58 milionů kilometrů",
-                delkaRoku: "88 pozemských dní",
-                polomer: " 2439 kilometrů",
+                delkaDne: {
+                    hodnota: 176,
+                    jednotka: " pozemských dní"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 58,
+                    jednotka: " milionů kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 88,
+                    jednotka: " pozemských dní"
+                },
+                polomer: {
+                    hodnota: 2439,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Terestrická",
                 pocetMesicu: 0,
                 text:"Merkur je nejmenší planetou sluneční soustavy a nachází se nejblíže ke Slunci. Jeho rok trvá pouhých 88 pozemských dní a den je ještě kratší. Jeho povrch je velmi nerovný a pokrytý impaktními krátery, které vznikly při srážkách s meteority."
@@ -58,10 +70,22 @@ export class DataPlanet {
 
             texturaUrl: VenuseDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "243 zemských dní",
-                vzdalenostOdSlunce: "108 milionů kilometrů",
-                delkaRoku: "225 zemských dní",
-                polomer: "6051 km",
+                delkaDne: {
+                    hodnota: 243,
+                    jednotka: " pozemských dní"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 108,
+                    jednotka: " milionů kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 225,
+                    jednotka: " pozemských dní"
+                },
+                polomer: {
+                    hodnota: 6051,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Terestrická",
                 pocetMesicu: 0,
                 text:"Venuše je druhou planetou od Slunce a má nejteplejší povrch ze všech planet sluneční soustavy. Je pokryta silnou atmosférou tvořenou převážně oxidem uhličitým. Její rok trvá 225 pozemských dní a den trvá déle než rok. Venuše je také nejjasnější objekt na noční obloze po Slunci a Měsíci."
@@ -85,10 +109,22 @@ export class DataPlanet {
             normalTextureUrl: ZemeNormalMapTextureUrl,
             nightMapTextureUrl: ZemeSpecularTextureUrl,
             infoPlanety: {
-                delkaDne: "24 hodin",
-                vzdalenostOdSlunce: "149,6 milionů kilometrů",
-                delkaRoku: "365,25 dní",
-                polomer: "6378 km",
+                delkaDne: {
+                    hodnota: 24,
+                    jednotka: " hodin",
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 149.6,
+                    jednotka: " milionů kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 365.25,
+                    jednotka: " pozemských dní"
+                },
+                polomer: {
+                    hodnota: 6378,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Terestrická",
                 pocetMesicu: 1,                
                 text:"Země je třetí planetou od Slunce a jedinou planetou, na které je známo, že existuje život. Má příznivé podmínky pro život díky vhodné vzdálenosti od Slunce, která umožňuje přítomnost kapalné vody na povrchu. Kromě toho má Země výrazný magnetický pole, které chrání život na povrchu před škodlivým slunečním zářením a větry slunečního větru. Je také jedinou planetou, na které byla zaznamenána tectonická aktivita a kde jsou známy tektonické desky, které se pohybují a vytvářejí geologické útvary."
@@ -110,10 +146,25 @@ export class DataPlanet {
 
             texturaUrl: MarsDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "24,6 hodin",
-                vzdalenostOdSlunce: "228 milionů kilometrů",
-                delkaRoku: " 687 zemských dní",
-                polomer: "3389 km",
+                delkaDne: {
+                    hodnota: 24,
+                    jednotka: " hodin",
+                    hodnota2: 10,
+                    jednotka2: " hodin",
+
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 228,
+                    jednotka: " milionů kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 687,
+                    jednotka: " pozemských dní"
+                },
+                polomer: {
+                    hodnota: 3389,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Terestrická",
                 pocetMesicu: 2,
                 text:'Mars: Mars je často nazýván "rudou planetou" kvůli své červené barvě na noční obloze. Je to čtvrtá planeta od Slunce a je známá svým prašným, hornatým terénem. Mars je pro vědce velkým zdrojem zájmu, protože by mohl být klíčem k nalezení důkazů o existenci života v minulosti. Zároveň je také plánovaným cílem pro budoucí lidské mise do vesmíru'
@@ -136,10 +187,24 @@ export class DataPlanet {
 
             texturaUrl: JupiterDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "9 hodin, 56 minut",
-                vzdalenostOdSlunce: "778 milionů kilometrů",
-                delkaRoku: "11,9 Zemských let",
-                polomer: "69911 km",
+                delkaDne: {
+                    hodnota: 9,
+                    jednotka: " hodin",
+                    hodnota2: 56,
+                    jednotka2: " minut"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 778,
+                    jednotka: " milionů kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 11.9,
+                    jednotka: " pozemských let"
+                },
+                polomer: {
+                    hodnota: 69911,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Plynný obr",
                 pocetMesicu: 79,
                 text:"Jupiter je největší planetou naší sluneční soustavy a má silné magnetické pole, které vytváří rozsáhlé radiační pásy kolem planety. Díky své velikosti a gravitaci dokáže Jupiter ovlivňovat pohyb ostatních planet a těles v okolí. Jupiter je také známý svými mnoha měsíci, z nichž nejznámější jsou Io, Europa, Ganymed a Kallisto."
@@ -161,10 +226,24 @@ export class DataPlanet {
 
             texturaUrl: SaturnDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "10 hodin a 39 minut",
-                vzdalenostOdSlunce: "1,4 miliardy kilometrů",
-                delkaRoku: "29,5 Zemských let",
-                polomer: "58232",
+                delkaDne: {
+                    hodnota: 10,
+                    jednotka: " hodin",
+                    hodnota2: 39,
+                    jednotka2: " minut"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 1.4,
+                    jednotka: " miliardy kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 29.5,
+                    jednotka: " pozemských let"
+                },
+                polomer: {
+                    hodnota: 58232,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Plynný obr",
                 pocetMesicu: 82,
                 text:"Saturn je známý svými charakteristickými kruhy, které jsou vlastně tvořeny mnoha tisíci prstenců z ledu a kamení. Je to šestá planeta od Slunce a má velmi nízkou hustotu, což znamená, že by se Saturn mohl vznášet na vodní hladině, pokud by taková byla. Saturn má také mnoho měsíců, z nichž největší je Titan, který má hustší atmosféru než jakákoli jiná měsíční hmota v naší sluneční soustavě."
@@ -187,10 +266,24 @@ export class DataPlanet {
 
             texturaUrl: UranDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "17 hodin a 14 minut",
-                vzdalenostOdSlunce: "2,9 miliardy kilometrů",
-                delkaRoku: "84 Zemských let",
-                polomer: "25362 km",
+                delkaDne: {
+                    hodnota: 17,
+                    jednotka: " hodin",
+                    hodnota2: 14,
+                    jednotka2: " minut"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 2.9,
+                    jednotka: " miliardy kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 84,
+                    jednotka: " pozemských let"
+                },
+                polomer: {
+                    hodnota: 25362,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Ledový obr",
                 pocetMesicu: 27,
                 text:"Uran je nejchladnější planetou sluneční soustavy, s teplotou povrchu kolem -210 °C. Je to sedmá planeta od Slunce a je známý svým charakteristickým náklonem, který způsobuje, že se póly planety nacházejí téměř ve vodorovné poloze. Uran má 27 známých měsíců, z nichž největší jsou Titania, Oberon, Umbriel, Ariel a Miranda."
@@ -213,10 +306,24 @@ export class DataPlanet {
 
             texturaUrl: NeptunDiffuseTextureUrl,
             infoPlanety: {
-                delkaDne: "16 hodin, 6 minut",
-                vzdalenostOdSlunce: "4,5 miliardy kilometrů",
-                delkaRoku: "164,8 Zemských let",
-                polomer: "24622 km",
+                delkaDne: {
+                    hodnota: 16,
+                    jednotka: " hodin",
+                    hodnota2: 6,
+                    jednotka2: " minut"
+                },
+                vzdalenostOdSlunce: {
+                    hodnota: 4.5,
+                    jednotka: " miliardy kilometrů"
+                },
+                delkaRoku: {
+                    hodnota: 164.8,
+                    jednotka: " pozemských let"
+                },
+                polomer: {
+                    hodnota: 24622,
+                    jednotka: " kilometrů"
+                },
                 typPlanety: "Ledový obr",
                 pocetMesicu: 14,
                 text:"Neptun je osmou planetou od Slunce a je nejvzdálenější velkou planetou sluneční soustavy. Má velmi silné větry, které dosahují rychlosti až 2000 km/h. Neptun má 14 známých měsíců, z nichž největší je Triton, který má neobvyklou retrográdní oběžnou dráhu a patrně byl zachycen gravitací Neptunu z jiné části sluneční soustavy."

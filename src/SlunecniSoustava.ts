@@ -13,7 +13,6 @@ export class SlunecniSoustava {
     private readonly slunce: Slunce = new Slunce();
     private camera: BABYLON.ArcRotateCamera | undefined;
     private zoomFactor: number;
-    private dataPlanet: DataPlanet = new DataPlanet();
     public meshIdInView: BABYLON.Mesh;
     public infoKartaPlanety: InfoKartaPlanety;
 
@@ -199,7 +198,7 @@ export class SlunecniSoustava {
 
     public setMeshInView(planeta: string): BABYLON.Mesh{
         this.meshIdInView = <BABYLON.Mesh>this.scene.getMeshById(planeta);
-        this.camera!.lowerRadiusLimit = this.dataPlanet.orbitalniPrvky[this.meshIdInView.name] ? <number>this.dataPlanet.orbitalniPrvky[this.meshIdInView.name].minZoomFactor : 230;
+        this.camera!.lowerRadiusLimit = DataPlanet.orbitalniPrvky[this.meshIdInView.name] ? <number>DataPlanet.orbitalniPrvky[this.meshIdInView.name].minZoomFactor : 230;
         if(this.camera!.radius < this.camera!.lowerRadiusLimit) {
             this.camera!.radius = this.camera!.lowerRadiusLimit;
             this.scaleOnZoom();   

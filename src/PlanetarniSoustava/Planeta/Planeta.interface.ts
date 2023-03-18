@@ -14,5 +14,4 @@ export interface IPlaneta {
     atmosferaTextureUrl?: string;
     minZoomFactor?: number;
     infoPlanety: IInfoPlanety
-
 }
