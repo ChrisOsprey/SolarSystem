@@ -94,13 +94,11 @@ export class InfoKartaPlanety {
 
     private nextPlaneta(){
         const nextIndex: number = this.seznamPlanet.indexOf(this.app.meshIdInView.name) + 1;
-        debugger
         if(nextIndex < this.seznamPlanet.length)this.app.setMeshInView(this.seznamPlanet[nextIndex])
     }
 
     private previousPlaneta(){
         const previousIndex: number = this.seznamPlanet.indexOf(this.app.meshIdInView.name) - 1;
-        debugger
         (previousIndex >= 0) ? this.app.setMeshInView(this.seznamPlanet[previousIndex]) : this.app.setMeshInView("Slunce")
     }
 }
