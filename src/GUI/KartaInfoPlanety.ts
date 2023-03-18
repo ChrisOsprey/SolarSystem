@@ -39,4 +39,9 @@ export class KartaInfoPlanety {
         
 
     }
+
+    public changeInfoPlanety(){
+        if(this.title) this.title.textContent = this.app.meshIdInView.name;
+        if(this.paragraf) this.paragraf.textContent = (this.app.meshIdInView.name !== "Slunce") ? this.dataPlanet.orbitalniPrvky[this.app.meshIdInView.name].infoPlanety?.text : this.getDefaultInfo();
+    }
 }

@@ -4,6 +4,7 @@ import { KartaInfoPlanety } from "./KartaInfoPlanety";
 
 export class InfoKartaPlanety {
     private app: SlunecniSoustava;
+    private kartaInfoPlanety: KartaInfoPlanety
     private flexContent: HTMLElement | null;
     private canvas: HTMLCanvasElement | null;
     private infoKarta : HTMLElement | null;
@@ -50,7 +51,7 @@ export class InfoKartaPlanety {
             this.previousPlaneta();            
         })
 
-        new KartaInfoPlanety(app);
+        this.kartaInfoPlanety = new KartaInfoPlanety(app);
     }
 
     private resizeContent(){
@@ -95,11 +96,14 @@ export class InfoKartaPlanety {
     private nextPlaneta(){
         const nextIndex: number = this.seznamPlanet.indexOf(this.app.meshIdInView.name) + 1;
         if(nextIndex < this.seznamPlanet.length)this.app.setMeshInView(this.seznamPlanet[nextIndex])
+        this.kartaInfoPlanety.changeInfoPlanety();
     }
 
     private previousPlaneta(){
         const previousIndex: number = this.seznamPlanet.indexOf(this.app.meshIdInView.name) - 1;
-        (previousIndex >= 0) ? this.app.setMeshInView(this.seznamPlanet[previousIndex]) : this.app.setMeshInView("Slunce")
+        (previousIndex >= 0) ? this.app.setMeshInView(this.seznamPlanet[previousIndex]) : this.app.setMeshInView("Slunce");
+        this.kartaInfoPlanety.changeInfoPlanety();
+
     }
 }
    

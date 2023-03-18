@@ -159,21 +159,31 @@
       background-color: #222;
       padding: 2rem;
       color: white;
-
+      overflow-x: scroll;
     }
 
     h3 {
       margin-top:1rem;
       margin-bottom:1rem;
-      font-size: 4rem;
+      font-size: 4vw;
       font-family: 'Bebas Neue', cursive;
+    }
+
+    #infoKarta.vertical h3 {
+      font-size: 4vh;
     }
 
     #paragraf {
       max-height: 35%;
       min-width: 45vw;
       font-family: 'Roboto', sans-serif;
-      font-size: 1.2em;
+      font-size: 1.9vw;
+      text-align: justify;
+    }
+
+    #infoKarta.vertical #paragraf {
+      font-size: 1.7vh;
+      text-align: left;
     }
 
     .cards {
@@ -184,25 +194,11 @@
       position: relative;
 
     }
-    
-    #infoKarta.vertical .cards{
-      flex-direction: row;
-      justify-content: space-between;
-
-    }
 
     .card {
       min-width: 100%;
       max-height: 35%;
       position: relative;
-    }
-
-    #infoKarta.vertical .card{
-      min-width: 40%;
-      max-width: 45%;
-
-      max-height: 50%;
-
     }
 
 
@@ -238,26 +234,14 @@
               <p id="paragraf"></p>
             </div>
             <div class="card infoTiles">
-              <div class="tile"></div>
+              <div class="tile" style="font-size: 1.7vh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates ipsum iusto ad. Dolorem unde esse minima tempora alias dolorum hic aperiam. Natus hic cum iusto molestias velit mollitia consectetur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, maiores. Excepturi eligendi eum labore quidem quibusdam modi soluta rerum! Deleniti sed et assumenda necessitatibus unde blanditiis fugit a at laudantium dolores quibusdam aperiam recusandae delectus in, voluptatem totam vero fugiat minus beatae pariatur officiis magni! Enim, laudantium blanditiis molestiae saepe itaque voluptatibus? Magni modi delectus nostrum saepe earum. Reprehenderit iste, neque, delectus numquam debitis fugiat fugit veniam eligendi asperiores autem cum repellat quidem nostrum dolorum atque laborum animi quo unde. Enim cupiditate incidunt quam dignissimos illum, error voluptate laboriosam quasi nemo, culpa suscipit itaque architecto officiis doloribus eum esse assumenda?</div>
               <div class="tile"></div>
               <div class="tile"></div>
               <div class="tile"></div>
               <div class="tile"></div>
               <div class="tile"></div>
             </div>
-        </div>
-       
-        <div id="dotnav">
-          <span id="Merkur" class="dot"></span>
-          <span id="Venuše" class="dot"></span>
-          <span id="Země" class="dot"></span>
-          <span id="Mars" class="dot"></span>
-          <span id="Jupiter" class="dot"></span>
-          <span id="Saturn" class="dot"></span>
-          <span id="Uran" class="dot"></span>
-          <span id="Neptun" class="dot"></span>
-        </div>
-        
+        </div>        
       </div>
 
 
