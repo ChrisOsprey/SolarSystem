@@ -2,6 +2,8 @@ import * as BABYLON from '@babylonjs/core';
 import "@babylonjs/inspector";
 import { Slunce } from './slunce/Slunce.model';
 import { PlanetarniSoustava } from './PlanetarniSoustava/PlanetarniSoustava';
+import { InfoKartaPlanety } from './GUI/PlanetMenu';
+
 
 import HvezdnaOblohaPhotoDomeUrl from '/src/textury/starmap_2020_4k.jpg';
 import { DataPlanet } from './PlanetarniSoustava/DataPlanet';
@@ -13,6 +15,7 @@ export class SlunecniSoustava {
     private zoomFactor: number;
     private dataPlanet: DataPlanet = new DataPlanet();
     public meshIdInView: BABYLON.Mesh;
+    public infoKartaPlanety: InfoKartaPlanety;
 
     constructor(readonly canvas: HTMLCanvasElement) {
         this.engine = new BABYLON.Engine(canvas);
@@ -21,6 +24,7 @@ export class SlunecniSoustava {
         this.meshIdInView = this.setMeshInView("Slunce")
 
         this.getObserver(canvas).observe(canvas)
+        this.infoKartaPlanety = new InfoKartaPlanety(this);
     }
 
     debug(debugOn: boolean = true) {
@@ -32,7 +36,7 @@ export class SlunecniSoustava {
     }
 
     run() {
-        this.debug(true);
+        this.debug(false);
         this.engine.runRenderLoop(() => {
             this.scene.registerBeforeRender(() => {
                 if (!this.zoomChange()) {
@@ -117,6 +121,14 @@ export class SlunecniSoustava {
         const hveznaObloha: BABYLON.PhotoDome = new BABYLON.PhotoDome("hvěznáObloha", HvezdnaOblohaPhotoDomeUrl, {size: 10000}, scene);
         const slunecniSoustava = new BABYLON.Mesh("SlunečníSoustava", scene);
         const slunce: BABYLON.Mesh = this.slunce.createSlunce(scene); 
+        slunce.actionManager = new BABYLON.ActionManager(scene);
+        slunce.actionManager.registerAction(
+            new BABYLON.ExecuteCodeAction(
+            BABYLON.ActionManager.OnDoublePickTrigger,
+            () => {
+                this.infoKartaPlanety.toggleOpen();
+            }
+            ))
         slunce.parent = slunecniSoustava;
         light.parent = slunce;
 
@@ -132,6 +144,15 @@ export class SlunecniSoustava {
             planeta.planeta.animations.push(animaceRotacePlanety);
             scene.beginAnimation(planeta.planeta ,0, 3000, true);
             planeta.objeznaDrahaPlanety.parent = slunecniSoustava;
+            planeta.planeta.actionManager = new BABYLON.ActionManager(scene);
+
+            planeta.planeta.actionManager.registerAction(
+                new BABYLON.ExecuteCodeAction(
+                BABYLON.ActionManager.OnDoublePickTrigger,
+                () => {
+                    this.infoKartaPlanety.toggleOpen();
+                }
+                ))
         }
 
         
@@ -178,7 +199,13 @@ export class SlunecniSoustava {
 
     public setMeshInView(planeta: string): BABYLON.Mesh{
         this.meshIdInView = <BABYLON.Mesh>this.scene.getMeshById(planeta);
-        this.camera!.lowerRadiusLimit = this.dataPlanet.orbitalniPrvky[this.meshIdInView.name] ? <number>this.dataPlanet.orbitalniPrvky[this.meshIdInView.name].minZoomFactor : 215;
+        this.camera!.lowerRadiusLimit = this.dataPlanet.orbitalniPrvky[this.meshIdInView.name] ? <number>this.dataPlanet.orbitalniPrvky[this.meshIdInView.name].minZoomFactor : 230;
+        if(this.camera!.radius < this.camera!.lowerRadiusLimit) {
+            this.camera!.radius = this.camera!.lowerRadiusLimit;
+            this.scaleOnZoom();   
+        }
+        this.scaleOnZoom();   
         return this.meshIdInView;
+        
     }
 }

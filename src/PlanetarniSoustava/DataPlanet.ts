@@ -54,7 +54,7 @@ export class DataPlanet {
                 w: 54.85229,
                 M: 50.115,
             },
-            minZoomFactor: 180,
+            minZoomFactor: 181,
 
             texturaUrl: VenuseDiffuseTextureUrl,
             infoPlanety: {
@@ -132,7 +132,7 @@ export class DataPlanet {
                 w: 273.867,
                 M: 20.020
             },
-            minZoomFactor: 205,
+            minZoomFactor: 206,
 
             texturaUrl: JupiterDiffuseTextureUrl,
             infoPlanety: {
@@ -183,7 +183,7 @@ export class DataPlanet {
                 w: 96.998857,
                 M: 141.05,
             },
-            minZoomFactor: 200,
+            minZoomFactor: 201,
 
             texturaUrl: UranDiffuseTextureUrl,
             infoPlanety: {

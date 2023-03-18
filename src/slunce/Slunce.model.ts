@@ -12,6 +12,8 @@ export class Slunce {
         mat.emissiveColor = new BABYLON.Color3(0.3, 0.3, 0.15);
         mat.diffuseTexture = new BABYLON.Texture(slunceTextureUrl, scene);
         mat.diffuseTexture.level = 2;
+
+        
         return star;
     }
 }
