@@ -209,11 +209,11 @@ export class SlunecniSoustava {
         
     }
 
-    public async setAr(): Promise<void> {
-        const xr = await this.scene.createDefaultXRExperienceAsync({
-            uiOptions: {
-                sessionMode: 'immersive-ar'
-            }
-        });
-    }
+    // public async setAr(): Promise<void> {
+    //     const xr = await this.scene.createDefaultXRExperienceAsync({
+    //         uiOptions: {
+    //             sessionMode: 'immersive-ar'
+    //         }
+    //     });
+    // }
 }
