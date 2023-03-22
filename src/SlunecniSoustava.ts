@@ -167,7 +167,13 @@ export class SlunecniSoustava {
         //     glowLayer.addExcludedMesh(p);
         //     // p.animations.push(spinAnim);
         //     scene.beginAnimation(p, 0, 60, true, BABYLON.Scalar.RandomRange(0.1, 3));
-        // });        
+        // });       
+        
+        const xr = scene.createDefaultXRExperienceAsync({
+        uiOptions: {
+            sessionMode: 'immersive-ar'
+        }
+    });
         return scene;
     }
 
