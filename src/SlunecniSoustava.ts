@@ -169,11 +169,6 @@ export class SlunecniSoustava {
         //     scene.beginAnimation(p, 0, 60, true, BABYLON.Scalar.RandomRange(0.1, 3));
         // });       
         
-        const xr = scene.createDefaultXRExperienceAsync({
-        uiOptions: {
-            sessionMode: 'immersive-ar'
-        }
-    });
         return scene;
     }
 
@@ -212,5 +207,13 @@ export class SlunecniSoustava {
         this.scaleOnZoom();   
         return this.meshIdInView;
         
+    }
+
+    public async setAr(): Promise<void> {
+        const xr = await this.scene.createDefaultXRExperienceAsync({
+            uiOptions: {
+                sessionMode: 'immersive-ar'
+            }
+        });
     }
 }
